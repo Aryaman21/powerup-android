@@ -1,3 +1,4 @@
+![Travis](https://img.shields.io/travis/systers/powerup-android/rust.svg?style=for-the-badge)
 # PowerUp - Android
 
 PowerUp is a female empowerment educational mobile game app that will allow young girls to learn about reproductive health 
