@@ -40,23 +40,19 @@ public class VocabMatchEndTests {
     private ActivityController<VocabMatchEndActivity> controller;
     private VocabMatchEndActivity activity;
 
-    @Before
-    public void setUp() {
-        controller = Robolectric.buildActivity(VocabMatchEndActivity.class);
-    }
-
-
-    private void createWithIntent(int extra) {
+    public void createWithIntent(int extra) {
         Intent intent = new Intent(RuntimeEnvironment.application, VocabMatchEndActivity.class);
+        controller = Robolectric.buildActivity(VocabMatchEndActivity.class, intent);
         intent.putExtra(PowerUpUtils.SCORE, extra);
         activity = controller
-                .withIntent(intent)
                 .create()
                 .start()
                 .resume()
                 .visible()
                 .get();
+
     }
+
 
 
     @Test
